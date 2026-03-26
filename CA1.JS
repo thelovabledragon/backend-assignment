@@ -44,4 +44,7 @@ app.delete('/api/users/:id', async (req, res) => {
     res.json({ msg: "User deleted" });
 });
 
+app.get('/', (req, res) => {
+    res.send('Backend Server is Running Successfully! Use /api/users to see data.');
+});
 app.listen(3000, () => console.log('Server running on http://localhost:3000'));
